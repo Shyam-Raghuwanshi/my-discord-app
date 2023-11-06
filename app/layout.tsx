@@ -2,8 +2,12 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Jost } from "next/font/google";
 import { ClerkProvider } from "@clerk/nextjs";
-import { ThemeProvider } from "@/components/providers/theme-provider";
+
 import { cn } from "@/lib/utils";
+import { ThemeProvider } from "@/components/providers/theme-provider";
+import { ModalProvider } from "@/components/providers/modal-provider";
+
+
 const font = Jost({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -26,6 +30,7 @@ export default function RootLayout({
             enableSystem={true}
             storageKey="my-discord-theme"
           >
+            <ModalProvider />
             {children}
           </ThemeProvider>
         </body>
