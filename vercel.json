@@ -10,8 +10,5 @@
         "api/**/*.js": {
             "runtime": "@vercel/node"
         }
-    },
-    "scripts": {
-        "build": "prisma generate && next build"
     }
 }
