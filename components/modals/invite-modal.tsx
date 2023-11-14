@@ -22,7 +22,7 @@ export const InviteModal = () => {
   const origin = useOrigin();
   const isModalOpen = isOpen && type === "invite";
   const { server } = data;
-  const inviteUrl = `${origin}/${server?.inviteCode}`;
+  const inviteUrl = `${origin}/invite/${server?.inviteCode}`;
 
   const handleCopy = () => {
     navigator.clipboard.writeText(inviteUrl);
